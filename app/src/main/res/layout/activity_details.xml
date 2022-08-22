@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/logo"/>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/blue"
+        android:layout_marginHorizontal="30dp"
+        app:cardCornerRadius="18dp"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Your full name"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/father_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Father's Name:"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/full_name" />
+
+            <TextView
+                android:id="@+id/father_name_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:hint="father name display"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/father_name"
+                app:layout_constraintTop_toBottomOf="@id/full_name"
+                app:layout_constraintBottom_toBottomOf="@id/father_name"/>
+
+            <TextView
+                android:id="@+id/mother_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Mother's Name:"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/father_name" />
+
+            <TextView
+                android:id="@+id/mother_name_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="mother name display"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/mother_name"
+                app:layout_constraintTop_toBottomOf="@id/father_name"
+                app:layout_constraintBottom_toBottomOf="@id/mother_name"/>
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Address:"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mother_name" />
+
+            <TextView
+                android:id="@+id/address_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="address"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/address"
+                app:layout_constraintTop_toBottomOf="@id/mother_name"
+                app:layout_constraintBottom_toBottomOf="@id/address"/>
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Mobile:"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address" />
+
+            <TextView
+                android:id="@+id/mobile_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="number"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/mobile"
+                app:layout_constraintTop_toBottomOf="@id/address"
+                app:layout_constraintBottom_toBottomOf="@id/mobile"/>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="290dp"
+                android:layout_height="80dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/mobile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:cardCornerRadius="18dp"
+                android:layout_margin="30dp">
+                <TextView
+                    android:id="@+id/citizen_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="citizenship"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/card_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Back"
+        app:cornerRadius="0dp"
+        android:backgroundTint="@color/green"
+
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/voting_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voting Check"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/back_button"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

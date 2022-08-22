@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/circle1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/bg"
+        android:gravity="center"
+        android:text="Left circle"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/circle2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/circle1"
+        android:layout_marginLeft="-26dp"
+        android:layout_marginTop="-1dp"
+        android:layout_toRightOf="@+id/circle1"
+        android:background="@drawable/bg1"
+        android:gravity="center"
+        android:text="Middle circle"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/circle3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="147dp"
+        android:layout_toRightOf="@+id/circle2"
+        android:background="@drawable/bg2"
+        android:gravity="center"
+        android:text="Right circle"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+</RelativeLayout>
